@@ -1,6 +1,7 @@
+const peopleModel = require('../models/people.js')
 const router = require('express').Router();
 
-router.get('/', function(req, res){
+router.get('/', peopleModel.people, function(req, res){
   res.send('home')
 })
 
