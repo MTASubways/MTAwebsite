@@ -1,9 +1,13 @@
 const peopleModel = require('../models/people.js')
 const router = require('express').Router();
 
-router.get('/', peopleModel.people, function(req, res){
-  res.render('/index', {in: res.in, out : res.out})
+
+
+router.get('/', function(req, res){
+
+  res.render('index');
 
 })
 
-module.exports= router
+
+module.exports= router;
