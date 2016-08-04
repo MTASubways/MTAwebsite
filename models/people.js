@@ -13,8 +13,7 @@ function people(req, res, next){
     console.log(res.days)
     res.in = res.days.in
     res.out = res.days.out
-    console.log(res.in)
-    console.log(res.out)
+
     next()
   })
 }
