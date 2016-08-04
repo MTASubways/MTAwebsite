@@ -1,13 +1,77 @@
 /*@import url(https://fonts.googleapis.com/css?family=Playfair+Display)*/
 
 * {
- font-family: helvetica, arial;
+ font-family: 'Bitter', serif;
+ font-size: 12px;
+ margin: 0;
+
 }
 
 h1 {
-
   font-weight: 600;
-
+  text-align: center;
+  color: white;
+  height: 150px;
+  font-size: 60px;
+  background: linear-gradient(270deg, #333333, #A1A1A1, #2B2B2B);
+  background-size: 600% 600%;
+  -webkit-animation: Gradient 12s ease infinite;
+  -moz-animation: Gradient 12s ease infinite;
+  animation: Gradient 12s ease infinite;
 }
 
 
+
+#desc-container{
+  width: 100%;
+  background-color: #F5F5F5;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  margin: auto;
+  padding: 12px;
+  text-align: center
+}
+
+.dropbtn{
+  width: 180px;
+  height: 30px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  text-align: center;
+  padding: 3px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover{
+  background-color: #B3B3B3;
+}
+
+#form-container{
+  margin: 6vh auto 6vh 35vw;
+  width: 40vw;
+  margin-left:
+}
+
+#submitbtn{
+  margin-left:10px;
+  font-size: 19px;
+  background-color: #141414;
+  color: white;
+  width: 180px;
+  height: 50px;
+  font-weight: bolder;
+}
+
+#submitbtn:hover{
+  background-color: #2B2B2B
+}
+
+
+
+
+/*canvas {
+  size: 10%
+
+
+}
+*/

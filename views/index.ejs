@@ -4,54 +4,57 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>MTA Station Traffic</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
-<h1>MTA Station Traffic</h1>
-<p id="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+<h1 id="header">MTA Station Traffic - Union Square</h1>
+<div id="desc-container">
+  <p id="desc">No one data <br>
+Along this square but I,<br>
+This turnstile data.<br>
+  </p>
+</div>
 
-<form action="/" method="get">
-
-
-<h2>Union Square</h2>
-  <select name="month" id="month" onchange="" size="1">
-      <option value="1">January</option>
-      <option value="2">February</option>
-      <option value="3">March</option>
-      <option value="4">April</option>
-      <option value="5">May</option>
-      <option value="6">June</option>
-      <option value="7">July</option>
-      <option value="8">August</option>
-      <option value="9">September</option>
-      <option value="1">October</option>
-      <option value="11">November</option>
-      <option value="12">December</option>
-  </select>
-  <select name="day" id="day" onchange="" size="1">
-      <option value="0">MON</option>
-      <option value="1">TUE</option>
-      <option value="3">WED</option>
-      <option value="4">THR</option>
-      <option value="5">FRI</option>
-      <option value="6">SAT</option>
-      <option value="7">SUN</option>
-  </select>
-  <button>submit</button>
+<div id="form-container">
+  <form action="/" method="get">
+    <select name="month" id="month" onchange="" size="1" class="dropbtn">
+        <option value="1" class="drop-optn">January</option>
+        <option value="2" class="drop-optn">February</option>
+        <option value="3" class="drop-optn">March</option>
+        <option value="4" class="drop-optn">April</option>
+        <option value="5" class="drop-optn">May</option>
+        <option value="6" class="drop-optn">June</option>
+        <option value="7" class="drop-optn">July</option>
+        <option value="8" class="drop-optn">August</option>
+        <option value="9" class="drop-optn">September</option>
+        <option value="10" class="drop-optn">October</option>
+        <option value="11" class="drop-optn">November</option>
+        <option value="12" class="drop-optn">December</option>
+    </select>
+    <select name="day" id="day" onchange="" size="1" class="dropbtn">
+        <option value="0" class="drop-optn">Monday</option>
+        <option value="1" class="drop-optn">Tuesday</option>
+        <option value="3" class="drop-optn">Wednesday</option>
+        <option value="4" class="drop-optn">Thursday</option>
+        <option value="5" class="drop-optn">Friday</option>
+        <option value="6" class="drop-optn">Saturday</option>
+        <option value="7" class="drop-optn">Sunday</option>
+    </select>
+    <button class="dropbtn" id="submitbtn">submit</button>
   </form>
+</div>
 
 
-<canvas id="myChart" width="400" height="400"></canvas>
+<div id="#graph">
+
+
+<canvas id="myChart" width="800" height="250"></canvas>
+
+</div>
 <script>
   var ctx = document.getElementById("myChart");
 
