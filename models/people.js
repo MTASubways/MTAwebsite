@@ -1,14 +1,27 @@
 var request = require('request');
 
 function people(req, res, next){
+  var day= req.body.day
+  var month= req.body.month
+  var station= req.body.station
+  var url= 'http://localhost:4000/predict?day=1&month=1&station=1'
   request({
-    url: 'http://localhost:4000/predict?day=1&month=1&station=1',
+    url: url,
     method: 'get',
   }, (err, response, data)=>{
     if ( err ) throw err
     res.days= JSON.parse(data)
-    res.in =res.day.in
-    res.out = res.day.out
+    console.log(res.days)
+    res.in = []
+    res.out = []
+    for ( var i= 0; i < 24; i+=4){
+      var number1= res.days.in[i]
+      var number2= res.days.in[i]
+      res.in.push(number1)
+      res.out.push(number2)
+    }
+    console.log(res.in)
+    console.log(res.out)
     next()
   })
 }
