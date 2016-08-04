@@ -1,8 +1,12 @@
 var request = require('request');
 
 function people(req, res, next){
+  var day= req.body.day
+  var month= req.body.month
+  var station= req.body.station
+  var url= 'http://localhost:4000/predict?day=1&month=1&station=1'
   request({
-    url: 'http://localhost:4000/predict?day=1&month=1&station=1',
+    url: url,
     method: 'get',
   }, (err, response, data)=>{
     if ( err ) throw err
