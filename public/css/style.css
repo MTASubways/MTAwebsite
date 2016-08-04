@@ -12,6 +12,8 @@ h1 {
   text-align: center;
   color: white;
   height: 150px;
+  width: 100vw;
+  padding: 0px;
   font-size: 60px;
   background: linear-gradient(270deg, #333333, #A1A1A1, #2B2B2B);
   background-size: 600% 600%;
@@ -21,13 +23,12 @@ h1 {
 }
 
 
-
 #desc-container{
   width: 100%;
   background-color: #F5F5F5;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   margin: auto;
-  padding: 12px;
+  padding: 12px 0px;
   text-align: center
 }
 
