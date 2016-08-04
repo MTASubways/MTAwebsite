@@ -1,10 +1,9 @@
 var request = require('request');
 
 function people(req, res, next){
-  var day= req.body.day
-  var month= req.body.month
-  var station= req.body.station
-  var url= 'http://localhost:4000/predict?day=1&month=1&station=1'
+  var day= req.query.day
+  var month= req.query.month
+  var url= `http://localhost:4000/predict?day=1&month=1&station=1`
   request({
     url: url,
     method: 'get',
