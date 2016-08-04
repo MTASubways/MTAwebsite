@@ -3,6 +3,8 @@ var request = require('request');
 function people(req, res, next){
   var day= req.query.day
   var month= req.query.month
+  if (day === undefined) day=0;
+  if (month === undefined) month= 1;
   var url= `http://localhost:4000/predict?day=${day}&month=${month}`
   request({
     url: url,
