@@ -1,14 +1,15 @@
 'use strict'
 
 const express       = require('express');
+const app           = express();
+
+
 const path          = require('path');
 const logger        = require('morgan');
-const app           = express();
 const bodyParser    = require('body-parser');
-const peopleRoute = require('./controllers/people.js');
+const peopleRoute   = require('./controllers/people.js');
 const PORT          = process.env.PORT || 3000;
 
-app.set('superSecret', 'I love pizza')
 
 app.use(logger('dev'))
 
