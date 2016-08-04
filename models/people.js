@@ -6,8 +6,9 @@ function people(req, res, next){
     method: 'get',
   }, (err, response, data)=>{
     if ( err ) throw err
-    console.log(data)
     res.days= JSON.parse(data)
+    res.in =res.day.in
+    res.out = res.day.out
     next()
   })
 }
